@@ -1,17 +1,22 @@
-# p03_food_order
+# P03 — Food Order Mini App
 
-A new Flutter project.
+## Deskripsi Aplikasi
 
-## Getting Started
+Food Order Mini App adalah aplikasi pemesanan makanan sederhana yang dibuat menggunakan Flutter. Aplikasi ini memiliki tiga layar, yaitu Menu, Detail Pesanan, dan Checkout. Pengguna dapat memilih menu makanan atau minuman, mengubah jumlah pesanan, melihat total harga, dan mengisi formulir pemesanan.
 
-This project is a starting point for a Flutter application.
+Daftar menu berasal dari data yang dipisahkan dalam file tersendiri. Widget `MenuCard` digunakan kembali untuk menampilkan berbagai menu. `StatefulWidget` dan `setState` digunakan untuk memperbarui jumlah pesanan dan total harga. Form checkout menggunakan validasi untuk menolak input yang kosong.
 
-A few resources to get you started if this is your first Flutter project:
+## Bug yang Ditemukan dan Cara Memperbaikinya
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Saat menjalankan `flutter analyze`, saya menemukan error pada `widget_test.dart` karena pengujian masih memanggil kelas `MyApp`, sedangkan aplikasi yang dibuat menggunakan kelas `FoodOrderApp`. Saya menemukan penyebabnya melalui pesan error analyzer, kemudian memperbaiki pemanggilan widget pada file pengujian.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Saya juga menemukan warning bahwa properti `value` pada `DropdownButtonFormField` sudah deprecated. Saya mengikuti petunjuk analyzer dan menggantinya dengan `initialValue`. Setelah perubahan tersebut, `flutter analyze` berhasil dijalankan tanpa issue.
+
+## Cara Menjalankan
+
+```bash
+flutter pub get
+flutter analyze
+flutter test
+flutter run -d chrome
+```
