@@ -4,6 +4,7 @@ class MenuItem {
   final int price;
   final String description;
   final String emoji;
+  final String category;
 
   const MenuItem({
     required this.id,
@@ -11,5 +12,6 @@ class MenuItem {
     required this.price,
     required this.description,
     required this.emoji,
+    required this.category,
   });
 }

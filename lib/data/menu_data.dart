@@ -7,6 +7,7 @@ const List<MenuItem> menuData = [
     price: 18000,
     description: 'Nasi goreng spesial dengan telur.',
     emoji: '🍛',
+    category: 'Makanan',
   ),
   MenuItem(
     id: 'F002',
@@ -14,6 +15,7 @@ const List<MenuItem> menuData = [
     price: 22000,
     description: 'Ayam bakar dengan bumbu pilihan.',
     emoji: '🍗',
+    category: 'Makanan',
   ),
   MenuItem(
     id: 'F003',
@@ -21,6 +23,7 @@ const List<MenuItem> menuData = [
     price: 15000,
     description: 'Mie goreng gurih dengan sayuran.',
     emoji: '🍜',
+    category: 'Makanan',
   ),
   MenuItem(
     id: 'D001',
@@ -28,5 +31,6 @@ const List<MenuItem> menuData = [
     price: 5000,
     description: 'Teh manis dingin yang menyegarkan.',
     emoji: '🧋',
+    category: 'Minuman',
   ),
 ];
